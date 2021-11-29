@@ -6,7 +6,6 @@ import (
 	models "fizzbuzzapi/Models"
 	"fmt"
 	"net/http"
-	"reflect"
 
 	"strconv"
 
@@ -46,7 +45,6 @@ func FizzbuzzFunction(w http.ResponseWriter, r *http.Request) {
 
 	for element := list.Front(); element != nil; element = element.Next() {
 
-		fmt.Println(reflect.TypeOf(element.Value))
 		fizzbuzz.FizzBuzz += element.Value.(string)
 		fizzbuzz.FizzBuzz += " "
 
